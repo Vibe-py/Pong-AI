@@ -77,6 +77,8 @@ def game(genomes, config):
       ball.y = window_size[1]/2
       ball_speed = [4 * random.choice([1, -1]), 4 * random.choice([1, -1])]
       opponet_score += 1
+      genomes[0].fitness += 0.5
+      
     if ball.right >= window_size[0]:
       ball.x = window_size[0]/2
       ball.y = window_size[1]/2
