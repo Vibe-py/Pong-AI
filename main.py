@@ -62,7 +62,7 @@ def game(genomes, config):
 
     # ai to smash you :)
     for index, opponet in enumerate(opponet):
-      output = nets[index].activate(opponet.get_data())
+      output = nets[index].activate(opponet.y, ball.x, ball.y)
       i = output.index(max(output))
       if i == 0:
         opponet.y -= paddles_speed
